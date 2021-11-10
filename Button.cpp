@@ -6,12 +6,12 @@
 
 Button::Button(byte pin) {
   this->pin = pin;
-  lastReading = LOW;
+  lastReading = HIGH;
   init();
 }
 
 void Button::init() {
-  pinMode(pin, INPUT);
+  pinMode(pin, INPUT_PULLUP);
   update();
 }
 
@@ -39,5 +39,5 @@ byte Button::getState() {
 }
 
 bool Button::isPressed() {
-  return (getState() == HIGH);
+  return (getState() == LOW);
 }
