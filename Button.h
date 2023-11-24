@@ -15,13 +15,14 @@ class Button {
     byte state;
     byte lastReading;
     unsigned long lastDebounceTime = 0;
-    unsigned long debounceDelay = 50;
+    unsigned long debounceDelay = 30;
+
+    void update();
     
   public:
     Button(byte pin);
 
     void init();
-    void update();
 
     byte getState();
     bool isPressed();

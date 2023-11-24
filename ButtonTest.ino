@@ -1,16 +1,16 @@
 #include "Button.h"
 
-Button b(12);
+Button botonRojo(7);
 
 void setup() {
   pinMode(13, OUTPUT);
 }
 
 void loop() {
-  if (b.isPressed()) {
+  if (botonRojo.isPressed()) {
     digitalWrite(13,HIGH);
   }
   else {
-    digitalWrite(13, LOW);
+    digitalWrite(13,LOW);
   }
 }
